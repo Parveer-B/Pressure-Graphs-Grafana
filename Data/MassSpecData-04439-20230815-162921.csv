@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<ConfigurationData>
+   <CommunicationParameters
+      Port="COM4"
+      Baud="9600"
+      PacketFrequency="5.0"
+      PacketTimeout="1.0"
+      CommunicationsType="1"
+      UserFrequency="5.0"
+      UserTimeout="1.0"
+      NamedPort=""
+   />
+
+   <ConfigurationParameters
+      Filename="C:\Users\Amar Vutha\Desktop\RGA CONFIG FILES\rga_working_cal.cfg"
+      Description="General RGA running file."
+      TimeStamp="07e700080002000f0010001800240120"
+      DateTime="2023-08-15 4:24:36 PM"
+      Caption="CCU 4439 - Probe 224809"
+      Serial="4439"
+      Model="100"
+      VacuumPlusVersion="1.0.47"
+   />
+
+   <ScanParameters
+      ScanSpeed="500"
+      LowMass="1"
+      HighMass="110"
+      SamplesPerAMU="10"
+   />
+
+   <OperatingParameters
+      Mode="Trend"
+      Focus1="-22"
+      Focus2="-68"
+      ElectronEnergy="70.0"
+      FilamentEmission="2.0"
+      AutoZero="Off"
+      ScanMode="Sweep"
+      Filament="0"
+      PressureUnits="Torr"
+      EnableElectronMultiplier="0"
+      MultiplierVoltage="1035"
+      FilamentForceOffStartup="0"
+      TargetPressure="1.00e-007"
+      TargetPressureUnits="Torr"
+      MultiplierScale="1.00e+003"
+   />
+
+   <CalibrationParameters
+      LowCalMass="1"
+      LowCalResolution="640"
+      LowCalPosition="0.38"
+      LowCalIonEnergy="5.0"
+      HighCalMass="100"
+      HighCalResolution="1340"
+      HighCalPosition="0.40"
+      HighCalIonEnergy="5.0"
+      TotalAmpOffset="2000"
+      PartialAmpOffset="2085"
+      TotalIntegratingCap="10.00"
+      PartialIntegratingCap="3.00"
+      RFSettleTime="50"
+      SWSettleTime="10"
+      Pirani1ATM="1.88300"
+      PiraniZero="0.28600"
+      PiraniAutoRecalibrate="0"
+      PartialSensitivity="6.00e-004"
+      TotalSensitivity="1.00e+001"
+      debug="0"
+      DisablePressureProtection="2566164336912319500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000.000000"
+      FilamentControlP="-160000.000000"
+      FilamentControlI="10000.000000"
+      FilamentControlD="0.000000"
+      FilamentControlW="0.000000"
+      FilamentControlG="0.000000"
+      GroundThreshold="50.000000"
+      GroundThresholdVoltage="0.005000"
+      PiraniThresholdVoltage="0.450000"
+      ExternalIonSupply="0"
+   />
+
+   <LogFileParameters
+      Mode="2"
+      FileName=""
+      DirectoryName="C:\Users\Amar Vutha\Documents\vutha_lab\cryoclock\pumping_manifold\extorr_rga_data\bucket"
+      CreationOption="0"
+      NSweeps="2"
+      FileRecordingOn="1"
+   />
+
+   <MassTableParameters
+      Samples="100"
+      AudioOutput="1"
+   > 
+       <Mass1
+            Enabled="1"
+            Sound="0"
+            Mass="1"
+            Description=""
+            Color="Purple"
+            Dwell="21 ms"
+            HighWarning="0"
+            HighAlarm="0"
+            LowWarning="0"
+            LowAlarm="0"
+       />
+       <Mass2
+            Enabled="1"
+            Sound="0"
+            Mass="2"
+            Description=""
+            Color="Yellow"
+            Dwell="21 ms"
+            HighWarning="0"
+            HighAlarm="0"
+            LowWarning="0"
+            LowAlarm="0"
+       />
+       <Mass3
+            Enabled="1"
+            Sound="0"
+            Mass="16"
+            Description=""
+            Color="Aqua"
+            Dwell="21 ms"
+            HighWarning="0"
+            HighAlarm="0"
+            LowWarning="0"
+            LowAlarm="0"
+       />
+       <Mass4
+            Enabled="1"
+            Sound="0"
+            Mass="18"
+            Description=""
+            Color="Black"
+            Dwell="21 ms"
+            HighWarning="0"
+            HighAlarm="0"
+            LowWarning="0"
+            LowAlarm="0"
+       />
+       <Mass5
+            Enabled="1"
+            Sound="0"
+            Mass="28"
+            Description=""
+            Color="Lime"
+            Dwell="21 ms"
+            HighWarning="0"
+            HighAlarm="0"
+            LowWarning="0"
+            LowAlarm="0"
+       />
+       <Mass6
+            Enabled="1"
+            Sound="0"
+            Mass="32"
+            Description=""
+            Color="Navy"
+            Dwell="21 ms"
+            HighWarning="0"
+            HighAlarm="0"
+            LowWarning="0"
+            LowAlarm="0"
+       />
+       <Mass7
+            Enabled="1"
+            Sound="0"
+            Mass="44"
+            Description=""
+            Color="Maroon"
+            Dwell="21 ms"
+            HighWarning="0"
+            HighAlarm="0"
+            LowWarning="0"
+            LowAlarm="0"
+       />
+       <Mass8
+            Enabled="1"
+            Sound="0"
+            Mass="0"
+            Description="Total Pressure"
+            Color="Green"
+            Dwell="21 ms"
+            HighWarning="0"
+            HighAlarm="0"
+            LowWarning="0"
+            LowAlarm="0"
+       />
+       <Mass9
+            Enabled="1"
+            Sound="0"
+            Mass="998"
+            Description="Pirani Pressure"
+            Color="Red"
+            Dwell="21 ms"
+            HighWarning="0"
+            HighAlarm="0"
+            LowWarning="0"
+            LowAlarm="0"
+       />
+   </MassTableParameters>
+
+   <PrintingParameters
+      InvertColors="1"
+      ShowConfigurationFile="1"
+      ShowDescription="1"
+      ShowTotalPressure="1"
+      ShowPiraniPressure="1"
+      DateFormat=""
+      TimeFormat=""
+   />
+
+   <GraphParametersData>
+      <GraphParameters
+             HScale="20"
+      >
+          <Y-Axis
+               ScaleAbsolute="260"
+               ZeroAbsolute="0"
+               Mode="0"
+          />
+      </GraphParameters>
+      <GraphParameters
+             HScale="1"
+      >
+          <Y-Axis
+               ScaleAbsolute="1000"
+               ZeroAbsolute="88"
+               Mode="1"
+          />
+      </GraphParameters>
+   </GraphParametersData>
+
+   <WindowParameters>
+       <Frame
+            flags="2"
+            showCmd="3"
+            ptMinPosition.x="-1"
+            ptMinPosition.y="-1"
+            ptMaxPosition.x="-8"
+            ptMaxPosition.y="-31"
+            rcNormalPosition.left="26"
+            rcNormalPosition.top="68"
+            rcNormalPosition.right="910"
+            rcNormalPosition.bottom="417"
+       />
+       <Setup
+            flags="0"
+            showCmd="1"
+            ptMinPosition.x="-1"
+            ptMinPosition.y="-1"
+            ptMaxPosition.x="-1"
+            ptMaxPosition.y="-1"
+            rcNormalPosition.left="1133"
+            rcNormalPosition.top="46"
+            rcNormalPosition.right="1613"
+            rcNormalPosition.bottom="747"
+       />
+       <Main
+            flags="0"
+            showCmd="1"
+            ptMinPosition.x="-1"
+            ptMinPosition.y="-1"
+            ptMaxPosition.x="-1"
+            ptMaxPosition.y="-1"
+            rcNormalPosition.left="157"
+            rcNormalPosition.top="90"
+            rcNormalPosition.right="1790"
+            rcNormalPosition.bottom="971"
+       />
+   </WindowParameters>
+
+   <PlotParameters
+      BkColor="Pale green"
+      LineColor="Maroon"
+      ScanColor="Olive"
+      MouseWheel="0"
+      LogYAxis="1"
+      PressureLogYAxis="1"
+      PiraniColor="Red"
+      TotalColor="Blue"
+   />
+
+   <Outputs
+      DegasCurrent="0.3854"
+      ElectronicsTemperature="36.5358"
+      PowerSupply="23.8409"
+      FilamentVoltage="0.0761"
+      FilamentResistance="3.3182"
+      SensorTemperature="30.3970"
+      Source1Current="0.0002"
+      Source2Current="0.0002"
+      RFAmpVoltage="-0.2883"
+      PiraniCorr="-0.8704"
+      PiraniTemp="-0.8662"
+      PiraniPress="-1.9685"
+      GroundReference="-0.0034"
+      DCPlusFB="2.4067"
+      DCMinusFB="2.4073"
+      FilamentDACFine="2047.0000"
+      FilamentDACCoarse="2895.0000"
+      ReferenceVoltage="2.4961"
+      Focus1="-22.3537"
+      Focus2="-68.3634"
+      FilamentPWM="6.1483"
+      FilamentStatus="0"
+      BACurrent="3.7530e-015"
+      DegasTimeLeft="0"
+      PiraniPressureOut="1.8950e+003"
+      TotalPressureOut="3.7530e-013"
+   />
+
+</ConfigurationData>
+2023/08/15 16:29:20.496,    1.000,  3.1315e-011,
+2023/08/15 16:29:20.600,    2.000,  1.1651e-011,
+2023/08/15 16:29:20.704,   16.000,  3.8440e-011,
+2023/08/15 16:29:20.808,   18.000,  1.4782e-011,
+2023/08/15 16:29:20.912,   28.000,  2.4965e-011,
+2023/08/15 16:29:21.017,   32.000,  1.6900e-011,
+2023/08/15 16:29:21.121,   44.000,  2.5500e-011,
+2023/08/15 16:29:21.225,  999.000, -7.7959e-012,
+2023/08/15 16:29:21.329,  998.000,  1.8882e+003,
+2023/08/15 16:29:21.433,    1.000,  1.7987e-011,
+2023/08/15 16:29:21.537,    2.000,  1.9757e-011,
+2023/08/15 16:29:21.642,   16.000,  2.0549e-011,
+2023/08/15 16:29:21.746,   18.000,  1.2918e-011,
+2023/08/15 16:29:21.850,   28.000,  2.8676e-011,
+2023/08/15 16:29:21.954,   32.000,  1.8100e-011,
+2023/08/15 16:29:22.058,   44.000,  1.2402e-011,
+2023/08/15 16:29:22.162,  999.000, -8.5335e-012,
+2023/08/15 16:29:22.267,  998.000,  1.8912e+003,
+2023/08/15 16:29:22.371,    1.000,  2.2630e-011,
+2023/08/15 16:29:22.475,    2.000,  2.7980e-011,
+2023/08/15 16:29:22.579,   16.000,  1.8708e-011,
+2023/08/15 16:29:22.683,   18.000,  1.2976e-011,
+2023/08/15 16:29:22.787,   28.000,  3.5207e-011,
+2023/08/15 16:29:22.892,   32.000,  2.0366e-011,
+2023/08/15 16:29:22.996,   44.000,  1.4994e-011,
+2023/08/15 16:29:23.100,  999.000, -8.9999e-012,
+2023/08/15 16:29:23.204,  998.000,  1.8937e+003,
+2023/08/15 16:29:23.308,    1.000,  1.2775e-011,
+2023/08/15 16:29:23.412,    2.000,  2.3769e-011,
+2023/08/15 16:29:23.516,   16.000,  1.5741e-011,
+2023/08/15 16:29:23.621,   18.000,  1.9464e-011,
+2023/08/15 16:29:23.725,   28.000,  2.1102e-011,
+2023/08/15 16:29:23.829,   32.000,  1.9959e-011,
+2023/08/15 16:29:23.933,   44.000,  7.5722e-012,
+2023/08/15 16:29:24.037,  999.000, -9.8537e-012,
+2023/08/15 16:29:24.141,  998.000,  1.8901e+003,
