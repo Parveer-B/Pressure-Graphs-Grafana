@@ -1,2 +1,2 @@
 # Pressure-Graphs-Grafana
-https://wordpress.com/post/electricatoms.wordpress.com/33446
+https://electricatoms.wordpress.com/2023/08/21/grafana-pressure-graphs/
