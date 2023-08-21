@@ -34,7 +34,7 @@ def uploadtocsv(datapath, csv):
         lasttime = datetime.strptime('1970/05/26', "%Y/%m/%d") #Can modify if we only want data from a specific time back
     data = getdata(lasttime, datapath)
     dataframelist = getdataframelist(data)
-    df = pd.DataFrame(dataframelist)
+    df = pd.DataFrame(dataframelist).iloc[:-1]
     if not os.path.exists(csv):
         df.to_csv(csv)
     else:
@@ -55,7 +55,7 @@ def uploadtocsv(datapath, csv):
         data = getdata(lasttime, datapath)
         if data:
             dataframelist = getdataframelist(data)
-            dftoadd = pd.DataFrame(dataframelist)
+            dftoadd = pd.DataFrame(dataframelist).iloc[:-1]
             newcsv = addedcolumn(df, dftoadd)  
             if newcsv:
                 curcsv = pd.read_csv(csv)
@@ -72,7 +72,8 @@ def uploadtocsv(datapath, csv):
                                 sort = False)
                 dftoadd = df2.iloc[len(df):]
                 dftoadd.to_csv(csv, mode='a', header=False) 
-                df = dftoadd.copy()
+                if not dftoadd.empty:
+                    df = dftoadd.copy()
 
 
 uploadtocsv('Data/', 'extorrdata.csv')
