@@ -25,9 +25,19 @@ def getdata(lasttime, datapath):
     data = []
     for file in files:
         atdata = False
+        masssweep = False
         with open(datapath + file) as csv_file:
             csv_data = list(csv.reader(csv_file, delimiter=','))
             for row in csv_data:
+                if row:
+                    if "<?xml" in row[0]: 
+                        atdata = False
+                    elif "Mode=\"Trend\"" in row[0]:
+                        masssweep = False
+                    elif "Mode=\"Mass sweep\"" in row[0]:
+                        masssweep = True
+                if masssweep == True:
+                    continue
                 if atdata:
                     rowtime = datetime.strptime(row[0], "%Y/%m/%d %H:%M:%S.%f").replace(microsecond=0)
                     if not pastlasttime:
@@ -35,10 +45,13 @@ def getdata(lasttime, datapath):
                             pastlasttime = True
                     if pastlasttime:
                         data.append([rowtime, convertt(row[1]), row[2]])
-                    
+
                 elif row:
                     if "</ConfigurationData>" in row[0]:
                         atdata = True
+                    
     return data
 
 a = getdata(datetime.strptime('2023/08/16 10:28:26', "%Y/%m/%d %H:%M:%S"),'Data/')
+Mode="Trend"
+Mode="Mass sweep"

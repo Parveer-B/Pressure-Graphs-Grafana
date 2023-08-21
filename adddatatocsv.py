@@ -4,6 +4,14 @@ import os
 from datetime import datetime
 import time
 
+def addedcolumn(previousdf, newdf):
+    added = False
+    for column in newdf:
+        if column not in previousdf:
+            added = True
+    return added
+
+
 def getdataframelist(data):
     dataframelist = []
     for item in data:
@@ -27,12 +35,19 @@ def uploadtocsv(datapath, csv):
     data = getdata(lasttime, datapath)
     dataframelist = getdataframelist(data)
     df = pd.DataFrame(dataframelist)
-    if os.path.exists(csv):
+    if not os.path.exists(csv):
+        df.to_csv(csv)
+    else:
         df2 = pd.concat([curcsv.iloc[:, 1:], df],             # Append two pandas DataFrames
                         ignore_index = True,
                         sort = False)
-        df = df2.iloc[len(curcsv):]
-    df.to_csv(csv, mode='a', header=not os.path.exists(csv))
+        newcsv = addedcolumn(curcsv, df)
+        if newcsv:
+            df2.to_csv(csv)
+        else:
+            df = df2.iloc[len(curcsv):]
+            df.to_csv(csv, mode='a', header=not os.path.exists(csv))
+
     while True:
         time.sleep(30)
         if not df.empty:
@@ -40,13 +55,24 @@ def uploadtocsv(datapath, csv):
         data = getdata(lasttime, datapath)
         if data:
             dataframelist = getdataframelist(data)
-            dftoadd = pd.DataFrame(dataframelist)  
-            df2 = pd.concat([df, dftoadd],             # Append two pandas DataFrames
-                            ignore_index = True,
-                            sort = False)
-            dftoadd = df2.iloc[len(df):]
-            dftoadd.to_csv(csv, mode='a', header=not os.path.exists(csv)) 
-            df = dftoadd.copy()
+            dftoadd = pd.DataFrame(dataframelist)
+            newcsv = addedcolumn(df, dftoadd)  
+            if newcsv:
+                curcsv = pd.read_csv(csv)
+                newcsvdf = pd.concat([curcsv.iloc[:, 1:], dftoadd],             # Append two pandas DataFrames
+                        ignore_index = True,
+                        sort = False)
+                newcsvdf.to_csv(csv)
+                df = newcsvdf.copy()
+
+                
+            else:
+                df2 = pd.concat([df, dftoadd],             # Append two pandas DataFrames
+                                ignore_index = True,
+                                sort = False)
+                dftoadd = df2.iloc[len(df):]
+                dftoadd.to_csv(csv, mode='a', header=False) 
+                df = dftoadd.copy()
 
 
 uploadtocsv('Data/', 'extorrdata.csv')
